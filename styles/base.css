@@ -1,0 +1,195 @@
+/* ===== BASIC RESET ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== GRID CONFIGURATION ON BODY ===== */
+body {
+    margin: 0;
+    font-family: Verdana, Arial, sans-serif;
+
+    /* Apply CSS Grid directly on the body element */
+    display: grid;
+
+    /* Define two columns: main content + aside */
+    grid-template-columns: 2fr 1fr;
+
+    /* Define rows: header / content / footer */
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "banner banner"
+        "main   aside"
+        "footer footer";
+
+
+    /* Make the layout fill the viewport height */
+    min-height: 100vh;
+}
+
+/* ===== GRID AREA ASSIGNMENT ===== */
+.site-header {
+    grid-area: header;
+}
+
+.page-banner {
+    grid-area: banner;
+    background: #ffffff;
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.site-main {
+    grid-area: main;
+}
+
+.site-aside {
+    grid-area: aside;
+}
+
+.site-footer {
+    grid-area: footer;
+}
+
+/* ===== HEADER STYLES ===== */
+.site-header {
+    background: #444444;
+    color: #ffffff;
+}
+
+.header-content {
+    padding: 28px 16px; /* mais altura em cima e embaixo */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===== NAVIGATION WITH FLEX ===== */
+.site-nav {
+    background: #000000;
+}
+
+/* Flex applied to the navigation menu */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ===== NAVIGATION LINKS ===== */
+.nav-list a {
+    display: block;
+    padding: 14px 18px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Visual effect when hovering the menu */
+.nav-list a:hover {
+    background: rgba(255,255,255,.15);
+}
+
+/* ===== PAGE BANNER (NAME AREA) ===== */
+.banner-title {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.page-banner h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ===== CONTENT ROW (TEXT + IMAGE) ===== */
+.content-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.content-row p {
+  margin: 0;
+}
+
+.profile-photo {
+  border-radius: 8px;
+}
+
+.flag {
+  border: 1px solid #ccc;
+}
+
+/* ===== MAIN CONTENT ===== */
+.site-main {
+    background: #e0e0e0;
+    padding: 16px;
+
+    /* Minimum height to resemble the placeholder image */
+    min-height: 300px;
+}
+
+/* ===== ASIDE ===== */
+.site-aside {
+    background: #ffffff;
+    padding: 16px;
+
+    border-left: 1px solid #cccccc;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #222222;
+    color: #ffffff;
+    text-align: center;
+
+    padding: 24px 16px;
+}
+
+.site-footer p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+
+/* ===== RESPONSIVE BEHAVIOR ===== */
+@media (max-width: 768px) {
+
+    /* Stack layout on small screens */
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "banner"
+            "main"
+            "aside"
+            "footer";
+
+    }
+
+    /* Allow the menu to wrap on small devices */
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav-list a {
+        padding: 10px 14px;
+    }
+
+    .page-banner h1 {
+    font-size: 1.6rem;
+}
+}
+
+/* ===== END OF STYLES ===== */

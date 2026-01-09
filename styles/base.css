@@ -6,7 +6,8 @@
 /* ===== GRID CONFIGURATION ON BODY ===== */
 body {
     margin: 0;
-    font-family: Verdana, Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+}
 
     /* Apply CSS Grid directly on the body element */
     display: grid;

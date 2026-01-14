@@ -1,0 +1,139 @@
+:root {
+  --purple: #3b0a62;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#menu {
+  display: block;
+  font-size: 2rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+#menu::before {
+  content: "☰";
+}
+#menu.open::before {
+  content: "X";
+}
+
+.site-header {
+  background: var(--purple);
+  color: #fff;
+}
+
+.bar {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li {
+  display: none;
+}
+
+.open li {
+  display: block;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 8px;
+}
+
+.nav-list a:hover {
+	text-decoration: underline double;
+	background-color: #eee;
+	color: #000;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+.page-title {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  justify-items: center;
+}
+
+.card {
+  margin: 0;
+  text-align: center;
+}
+
+.card img {
+  width: 220px;
+  height: auto;
+  display: block;
+}
+
+.card figcaption {
+  margin-top: 8px;
+  color: #3b0a62;
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  background: var(--purple);
+  color: #fff;
+  text-align: center;
+  padding: 14px 10px;
+  margin-top: 30px;
+}
+
+.site-footer p {
+  margin: 4px 0;
+}
+
+/* Responsivo */
+@media (min-width: 40em) {
+  #menu {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    gap: 20px;
+  }
+
+  .nav-list li {
+    display: block;
+  }
+
+  .nav-list a {
+    padding: 6px 8px;
+  }
+}

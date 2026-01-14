@@ -1,0 +1,9 @@
+/* Responsivo */
+@media (max-width: 800px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .bar { flex-direction: column; gap: 10px; }
+}
+
+@media (max-width: 520px) {
+  .gallery { grid-template-columns: 1fr; }
+}

@@ -116,7 +116,7 @@ body {
   margin: 4px 0;
 }
 
-/* Responsivo */
+/* Responsivo  */
 @media (min-width: 40em) {
   #menu {
     display: none;

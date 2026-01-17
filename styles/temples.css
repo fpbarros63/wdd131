@@ -52,9 +52,7 @@ body {
 #menu::before { content: "☰"; }
 #menu.open::before { content: "X"; }
 
-/* ===================== NAV LIST (MOBILE DEFAULT: CLOSED) ===================== */
-/* We do NOT hide .site-nav globally (otherwise desktop starts with no menu).
-   We only hide the UL list on mobile by default. */
+/* ===================== NAV LIST ===================== */
 .nav-list {
   list-style: none;
   margin: 0;
@@ -83,8 +81,6 @@ body {
 }
 
 /* ===================== MOBILE: MENU OPEN STATE ===================== */
-/* When open, we turn the header bar into a 3-column grid:
-   [left spacer] [nav column in the middle] [X button on the right] */
 .site-header.menu-open .bar {
   display: grid;
   grid-template-columns: 1fr auto 1fr; /* spacer | nav | button */

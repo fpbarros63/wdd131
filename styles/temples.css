@@ -1,5 +1,11 @@
+/* ===================== ROOT ===================== */
 :root {
   --purple: #3b0a62;
+}
+
+/* ===================== RESET ===================== */
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -7,33 +13,23 @@ body {
   font-family: Arial, sans-serif;
 }
 
-#menu {
-  display: block;
-  font-size: 2rem;
-  border: 0;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-#menu::before {
-  content: "☰";
-}
-#menu.open::before {
-  content: "X";
-}
-
+/* ===================== HEADER ===================== */
 .site-header {
   background: var(--purple);
   color: #fff;
 }
 
+/* Top bar: title left, hamburger right (mobile default) */
 .bar {
   max-width: 980px;
   margin: 0 auto;
   padding: 16px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
 }
 
 .logo {
@@ -41,34 +37,93 @@ body {
   font-size: 1.4rem;
 }
 
+/* ===================== HAMBURGER BUTTON (MOBILE) ===================== */
+#menu {
+  display: block;      /* visible on mobile */
+  margin-left: auto;   /* push to the far right in flex */
+  font-size: 2rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#menu::before { content: "☰"; }
+#menu.open::before { content: "X"; }
+
+/* ===================== NAV LIST (MOBILE DEFAULT: CLOSED) ===================== */
+/* We do NOT hide .site-nav globally (otherwise desktop starts with no menu).
+   We only hide the UL list on mobile by default. */
 .nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 20px;
+
+  display: none;        /* closed by default on mobile */
+  background: transparent;
 }
 
 .nav-list li {
-  display: none;
-}
-
-.open li {
   display: block;
 }
 
 .nav-list a {
   color: #fff;
   text-decoration: none;
-  padding: 6px 8px;
+  padding: 8px 12px;
+  display: block;
+  text-align: center;
 }
 
 .nav-list a:hover {
-	text-decoration: underline double;
-	background-color: #eee;
-	color: #000;
+  text-decoration: underline double;
+  background: #eee;
+  color: #000;
 }
 
+/* ===================== MOBILE: MENU OPEN STATE ===================== */
+/* When open, we turn the header bar into a 3-column grid:
+   [left spacer] [nav column in the middle] [X button on the right] */
+.site-header.menu-open .bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* spacer | nav | button */
+  align-items: start;
+}
+
+/* Hide the header title when the menu is open */
+.site-header.menu-open .logo {
+  display: none;
+}
+
+/* Keep X at the top-right (same place as hamburger) */
+.site-header.menu-open #menu {
+  grid-column: 3;
+  justify-self: end;
+  align-self: start;
+  margin-left: 0; /* grid handles positioning */
+}
+
+/* Place nav in the CENTER column (inside the bar) */
+.site-header.menu-open .site-nav {
+  grid-column: 2;
+  justify-self: center;
+  align-self: start;
+}
+
+/* Show the UL as one centered column */
+.site-header.menu-open .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  margin: 0;
+  padding: 0;
+  background: transparent; /* header already purple */
+}
+
+/* ===================== MAIN ===================== */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -80,9 +135,11 @@ body {
   margin: 10px 0 20px;
 }
 
+/* ===================== GALLERY ===================== */
+/* Mobile default: 1 column */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 28px;
   justify-items: center;
 }
@@ -104,6 +161,7 @@ body {
   font-size: 0.9rem;
 }
 
+/* ===================== FOOTER ===================== */
 .site-footer {
   background: var(--purple);
   color: #fff;
@@ -116,6 +174,7 @@ body {
   margin: 4px 0;
 }
 
+/* ===================== ACCESSIBILITY ===================== */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -128,24 +187,17 @@ body {
   border: 0;
 }
 
-/* Responsivo  */
-@media (min-width: 40em) {
-  #menu {
-    display: none;
+/* ===================== GALLERY BREAKPOINTS ===================== */
+/* >= 521px: 2 columns */
+@media (min-width: 521px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .nav-list {
-    flex-direction: row;
-    background: transparent;
-    width: auto;
-    gap: 20px;
-  }
-
-  .nav-list li {
-    display: block;
-  }
-
-  .nav-list a {
-    padding: 6px 8px;
+/* >= 801px: 3 columns */
+@media (min-width: 801px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

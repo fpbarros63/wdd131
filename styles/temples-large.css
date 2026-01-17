@@ -1,9 +1,56 @@
-/* Responsivo  */
-@media (max-width: 800px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
-  .bar { flex-direction: column; gap: 10px; }
+@media (min-width: 801px) {
+
+  /* Hide hamburger on desktop */
+  #menu {
+    display: none;
+  }
+
+  /* Ensure the header title is visible on desktop */
+  .logo {
+    display: block;
+  }
+
+  /* If the user opened the mobile menu then resized to desktop,
+     force the title back on desktop */
+  .site-header.menu-open .logo {
+    display: block;
+  }
+
+  /* Reset the header bar layout (mobile open uses grid) */
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Ensure the NAV container is visible on desktop */
+  .site-nav {
+    display: block;
+    position: static;
+    width: auto;
+  }
+
+  /* Desktop menu: always visible and horizontal */
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list li {
+    display: block;
+  }
+
+  /* Ignore any mobile-open vertical layout when on desktop */
+  .site-header.menu-open .nav-list {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-@media (max-width: 520px) {
-  .gallery { grid-template-columns: 1fr; }
-}

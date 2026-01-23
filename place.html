@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place - Amazônia</title>
+
+    <meta name="description"
+        content="WDD 131 Place page featuring the Amazon Rainforest with responsive hero image and static weather data." />
+    <meta name="author" content="Francisco de Paula Barros" />
+
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="place-title">Amazônia (Brasil) — Manaus</h1>
+    </header>
+
+    <main class="place-main">
+
+        <!-- HERO IMAGE -->
+        <section class="hero" aria-label="Amazon Rainforest hero image">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 800px)" type="image/webp" />
+                <img src="images/hero-small.webp" alt="Jaguar in the Amazon Rainforest" width="800" height="1200"
+                    loading="lazy" />
+            </picture>
+        </section>
+
+        <!-- DATA CARD -->
+        <section class="card card-data" aria-label="Amazon rainforest data">
+            <h2>Data</h2>
+
+            <dl class="kv">
+                <div class="kv-row">
+                    <dt>Biome:</dt>
+                    <dd>Amazon Rainforest</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Area:</dt>
+                    <dd>~5,500,000 km²</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Reference City:</dt>
+                    <dd>Manaus (AM)</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Climate:</dt>
+                    <dd>Equatorial (hot &amp; humid)</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Main River:</dt>
+                    <dd>Amazon River</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Country:</dt>
+                    <dd>Brazil</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Language:</dt>
+                    <dd>Portuguese</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Time Zone:</dt>
+                    <dd>UTC −4 (Manaus)</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Calling Code:</dt>
+                    <dd>+55</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Internet TLD:</dt>
+                    <dd>.br</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- WEATHER CARD -->
+        <section class="card card-weather" aria-label="Weather in Manaus">
+            <h2 class="weather-title">Weather</h2>
+
+            <!-- SVG icon (mobile view requirement) -->
+            <img class="weather-svg" src="images/weather.svg" alt="Partly cloudy" width="64" height="64" />
+
+            <dl class="kv">
+                <div class="kv-row">
+                    <dt>Temperature:</dt>
+                    <dd><span id="temp">29</span> °C</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Conditions:</dt>
+                    <dd>Humid / Partly Cloudy</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Wind:</dt>
+                    <dd><span id="wind">6</span> km/h</dd>
+                </div>
+                <div class="kv-row">
+                    <dt>Wind Chill:</dt>
+                    <dd><span id="windchill">N/A</span></dd>
+                </div>
+            </dl>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy;<span id="year"></span> Francisco de Paula Barros • Amazônia
+        </p>
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+
+</html>

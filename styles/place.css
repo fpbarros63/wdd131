@@ -109,6 +109,10 @@ body {
   object-fit: contain;
 }
 
+.weather-title::after {
+  content: " ⛅";
+}
+
 /* FOOTER */
 .site-footer {
   background: var(--brand);

@@ -1,0 +1,274 @@
+/* ===================== ROOT ===================== */
+:root {
+  --purple: #3b0a62;
+  --card-bg: #f2f2f2;
+  --card-border: #d8d8d8;
+}
+
+/* ===================== RESET ===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===================== HEADER ===================== */
+.site-header {
+  background: var(--purple);
+  color: #fff;
+}
+
+/* barra padrão */
+.bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* ===================== HAMBURGER ===================== */
+#menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border: 0;
+  background: transparent;
+  color: #fff;
+
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "X";
+}
+
+/* ===================== NAV (MOBILE FECHADO) ===================== */
+.site-nav {
+  display: none;
+}
+
+/* ===================== NAV (MOBILE ABERTO) ===================== */
+/* grid de 3 colunas: vazio | nav | X */
+.site-header.menu-open .bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+}
+
+/* esconde o logo no mobile aberto */
+.site-header.menu-open .logo {
+  display: none;
+}
+
+/* X na coluna 3, primeira linha */
+.site-header.menu-open #menu {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+}
+
+/* nav centralizado na coluna 2, primeira linha */
+.site-header.menu-open .site-nav {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: start;
+}
+
+/* lista vertical */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+/* ===== FORÇA TEXTO BRANCO (CORREÇÃO DEFINITIVA) ===== */
+.nav-list a,
+.nav-list a:visited,
+.nav-list a:active,
+.nav-list a:hover,
+.nav-list button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.nav-list a:hover,
+.nav-list button:hover {
+  text-decoration: underline;
+}
+
+/* ===================== MAIN ===================== */
+main {
+  padding: 28px 14px;
+}
+
+/* título da página (Home, Old, New...) */
+#pageTitle {
+  text-align: center;
+  margin: 20px 0 30px;
+  font-size: 1.6rem;
+  color: var(--purple);
+}
+
+/* ===================== GRID DOS CARDS ===================== */
+#templeCards {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  justify-items: center;
+}
+
+@media (min-width: 520px) {
+  #templeCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  #templeCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===================== CARD ===================== */
+.temple-card {
+  width: 100%;
+  max-width: 340px;
+
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 22px 18px 18px;
+  text-align: center;
+}
+
+.temple-card h3 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.temple-card p {
+  margin: 8px 0;
+  font-size: 1.05rem;
+}
+
+.temple-card .label {
+  color: var(--purple);
+  font-variant: small-caps;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* sombra destacada da imagem */
+.temple-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+
+  box-shadow:
+    0 18px 28px rgba(0, 0, 0, 0.35),
+    0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: var(--purple);
+  color: #fff;
+  text-align: center;
+  padding: 14px 10px;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* ===================== DESKTOP ===================== */
+@media (min-width: 800px) {
+  /* sem hamburger */
+  #menu {
+    display: none;
+  }
+
+  .site-nav {
+    display: block !important;
+  }
+
+  .bar {
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: block !important;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  .nav-list a,
+  .nav-list button {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===================== NAV LINKS (SEM SUBLINHADO) ===================== */
+.site-nav a,
+.site-nav a:visited,
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a:active {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* hover com cor (sem underline) */
+.site-nav a:hover {
+  color: #ffd54f; /* dourado suave */
+}
+

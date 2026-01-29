@@ -1,6 +1,4 @@
-/* =========================
-   HAMBURGER MENU
-========================= */
+/* =====   HAMBURGER MENU   ==== */
 const menuButton = document.querySelector("#menu");
 const header = document.querySelector(".site-header");
 const pageTitle = document.querySelector("#pageTitle");
@@ -23,10 +21,7 @@ if (menuButton && header) {
 }
 
 
-
-/* =========================
-   TEMPLE DATA
-========================= */
+/* ====== TEMPLES DATA ========== */
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -85,7 +80,6 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
 
-  // +3 exemplos (troque/edite se quiser)
   {
     templeName: "Recife Brazil",
     location: "Recife, Pernambuco, Brazil",
@@ -129,14 +123,10 @@ const temples = [
 ];
 
 
-/* =========================
-   RENDER FUNCTION (professor style)
-========================= */
 const cards = document.querySelector("#templeCards");
 
 function getYear(temple) {
-  // "2005, August, 7" -> 2005
-  return Number(temple.dedicated.split(",")[0].trim());
+    return Number(temple.dedicated.split(",")[0].trim());
 }
 
 function createTempleCard(filteredTemples) {
@@ -171,9 +161,7 @@ function createTempleCard(filteredTemples) {
   });
 }
 
-/* =========================
-   FILTER EVENTS (one by one)
-========================= */
+/* ======  FILTER EVENTS   ================ */
 const homeLink = document.querySelector("#home");
 const oldLink = document.querySelector("#old");
 const newLink = document.querySelector("#new");
@@ -217,13 +205,9 @@ smallLink.addEventListener("click", (e) => {
 });
 
 
-/* =========================
-   FOOTER DATES
-========================= */
+/* =====  FOOTER DATES  ====== */
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 
-/* =========================
-   INITIAL LOAD
-========================= */
+/* ====  INITIAL LOAD  ======== */
 createTempleCard(temples);

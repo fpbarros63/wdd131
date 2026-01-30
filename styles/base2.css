@@ -6,15 +6,47 @@
 body {
   margin: 0;
   font-family: "Roboto", Arial, sans-serif;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "banner banner"
+    "main aside"
+    "footer footer";
+
+  min-height: 100vh;
   background: #ffffff;
 }
 
-/* ===== HEADER ===== */
+/* ===== LAYOUT AREAS ===== */
 .site-header {
+  grid-area: header;
   background: #444;
   color: #fff;
 }
 
+.site-main {
+  grid-area: main;
+  padding: 16px;
+}
+
+.site-aside {
+  grid-area: aside;
+  padding: 16px;
+  display: flex;
+}
+
+.site-footer {
+  grid-area: footer;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 16px;
+}
+
+/* ===== HEADER ===== */
 .header-content {
   padding: 24px 16px;
   text-align: center;
@@ -46,8 +78,9 @@ body {
 
 /* ===== BANNER ===== */
 .page-banner {
+  grid-area: banner;
   text-align: center;
-  padding: 12px 16px;
+  padding: 20px 16px;
 }
 
 .banner-title {
@@ -55,26 +88,7 @@ body {
   font-size: 2rem;
 }
 
-/* ===== CONTENT LAYOUT (SIMPLE FLEX) ===== */
-.content-wrap {
-  max-width: 1100px;
-  margin: -10px auto;
-  padding: 16px;
-
-  display: flex;
-  gap: 16px;
-}
-
-/* main / aside proportions */
-.site-main {
-  flex: 3;
-}
-
-.site-aside {
-  flex: 1;
-}
-
-/* ===== CARD ===== */
+/* ===== CARD BASE ===== */
 .card {
   background: #ffffff;
   border: 1px solid #cccccc;
@@ -82,9 +96,20 @@ body {
   overflow: hidden;
 }
 
+/* Main and Aside height sync */
 .main-card,
 .aside-card {
   height: 100%;
+}
+
+.section-title {
+  margin: 0;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  background: #ffffff;
 }
 
 /* ===== CARD TITLES ===== */
@@ -95,20 +120,6 @@ body {
   color: #ffffff;
   text-align: center;
   font-size: 1.1rem;
-}
-
-.flag {
-  border: 1px solid #cccccc;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* ===== INTERNAL SECTION TITLE ===== */
-.section-title {
-  margin: 0;
-  padding: 12px 16px;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 700;
 }
 
 /* ===== CARD BODY ===== */
@@ -138,32 +149,40 @@ body {
   border-radius: 8px;
 }
 
+.flag {
+  border: 1px solid #ccc;
+}
+
 /* ===== LIST ===== */
 .resource-list {
   margin: 0;
   padding-left: 20px;
 }
 
-/* ===== FOOTER ===== */
-.site-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px 16px;
-}
-
-.site-footer p {
-  margin: 4px 0;   
-  line-height: 1.2;
+.site-main,
+.site-aside {
+  display: flex;
+  justify-content: center;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .content-wrap {
-    flex-direction: column;
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "banner"
+      "main"
+      "aside"
+      "footer";
   }
 
   .content-row {
     flex-direction: column;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

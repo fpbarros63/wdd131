@@ -1,130 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals | Francisco de Paula Barros</title>
-    <meta name="description" content="Home page related to WDD 131 - Dynamic Web Fundamentals - developed by Francisco de Paula - as a landing page for the course." /> 
-    <meta name="author" content="Francisco de Paula" />
+
+    <meta name="description" content="Home page for WDD 131">
+    <meta name="author" content="Francisco de Paula Barros">
+
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
 
-    
+    <!-- HEADER -->
     <header class="site-header">
-        <!-- Placeholder content as required -->
-        <div class="header-content">
-            <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
-        </div>
-        
-        <nav class="site-nav">
-            <!-- Navigation menu will use Flex -->
+        <div class="header-content"> <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span> </div>
+        <nav class="site-nav"> 
             <ul class="nav-list">
-                <li>
-                    <a href="https://www.linkedin.com/in/francisco-de-paula-barros-3762962bb/" target="_blank" rel="noopener">
-                        LinkedIn
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">
-                        Canvas
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank"
-                        rel="noopener">
-                        Scripture
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="project/" title="Final Project (placeholder)">
-                        Final Project
-                    </a>
-                </li>
+                <li> <a href="https://www.linkedin.com/in/francisco-de-paula-barros-3762962bb/" target="_blank"
+                        rel="noopener"> LinkedIn </a> </li>
+                <li> <a href="https://byupw.instructure.com/" target="_blank" rel="noopener"> Canvas </a> </li>
+                <li> <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+                        target="_blank" rel="noopener"> Scripture </a> </li>
+                <li> <a href="project/" title="Final Project (placeholder)"> Final Project </a> </li>
             </ul>
         </nav>
     </header>
 
+    <!-- BANNER -->
     <div class="page-banner">
         <h1 class="banner-title">Francisco de Paula Barros</h1>
     </div>
-    
-    <!-- Main placeholder area -->
-    <main class="site-main">
-    
-        <!-- CARD 1 -->
-        <section class="card">
-            <h2 class="card-title">About Me</h2>
-    
-            <div class="content-row">
-                <p>
-                    My name is Francisco and I am from Recife, Brazil. I am studying Web Development
-                    and learning how to build responsive websites with HTML, CSS, and JavaScript. I am married,
-                    have 4 daughters and 8 grandchildren. In my free time I enjoy playing chess with friends
-                    or online at chess.com. I love to travel, learn about new cultures and meet new people, I
-                    love nature and have great respect for all of God's creations.
-                </p>
-    
-                <img class="profile-photo" src="images/photo.gif" alt="Photo of Francisco" width="180" />
-            </div>
-        </section>
-    
-        <!-- CARD 2 (exigido pelo audit) -->
-        <section class="card">
-            <h2 class="card-title">Recife, Brazil</h2>
-    
-            <div class="content-row">
-                <img class="flag" src="images/flag_of_pernambucan.png" alt="Flag of Pernambuco" width="120" />
-    
-                <p>
-                    Recife is the "Brazilian Venice" because of its rivers and bridges, it has the largest carnival parade in the world
-                    (Galo da Madrugada), the first synagogue in the Americas, it is home to baobab trees outside of Africa and houses Porto
-                    Digital, one of the largest technology parks in Brazil, in addition to a rich culture with Frevo, Manguebeat, and
-                    delicacies such as bolo de rolo (rolled cake), also being a historically old and densely populated city, known for its
-                    gastronomy and cultural diversity.
-                </p>
-            </div>
-        </section>
-    
-    </main>
 
-    <!-- Aside placeholder area -->
-    <aside class="site-aside">
-        <!-- Card: Web Dev Resources -->
-        <section class="card">
-            <h2 class="card-title">Web Dev Resources</h2>
-    
-            <div class="card-body">
-                <ul class="resource-list">
-                    <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a></li>
-                    <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a>
-                    </li>
-                    <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a></li>
-                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
-                    <li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a></li>
-                    <li><a href="https://placeholder.com/" target="_blank" rel="noopener">Image Placeholders</a></li>
-                </ul>
-            </div>
-        </section>
-    </aside>
+    <!-- ✅ CONTAINER SIMPLES -->
+    <div class="content-wrap">
 
+        <!-- MAIN -->
+        <main class="site-main">
+            <section class="card main-card">
+
+                <h2 class="card-title">About Me</h2>
+
+                <div class="card-body content-row">
+                    <p>
+                        My name is Francisco and I am from Recife, Brazil. I am studying Web Development and learning how to build responsive
+                        websites with HTML, CSS, and JavaScript. I am married, have 4 daughters and 8 grandchildren. In my free time I enjoy
+                        playing chess with friends or online at chess.com. I love to travel, learn about new cultures and meet new people, I
+                        love nature and have great respect for all of God's creations.
+                    </p>
+
+                    <img src="images/photo.gif" alt="Photo of Francisco" class="profile-photo" width="140">
+                </div>
+
+                <hr class="card-divider">
+
+                <h3 class="section-title">Recife, Brazil</h3>
+
+                <div class="card-body content-row">
+                    <img class="flag" src="images/flag_of_pernambucan.png" alt="Flag of Pernambuco" width="120">
+
+                    <p>
+                        Recife is the "Brazilian Venice" because of its rivers and bridges, it has the largest carnival parade in the world
+                        (Galo da Madrugada), the first synagogue in the Americas, it is home to baobab trees outside of Africa and houses Porto
+                        Digital, one of the largest technology parks in Brazil, in addition to a rich culture with Frevo, Manguebeat, and
+                        delicacies such as bolo de rolo (rolled cake), also being a historically old and densely populated city, known for its
+                        gastronomy and cultural diversity.
+                    </p>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- ASIDE -->
+        <aside class="site-aside">
+            <section class="card aside-card">
+                <h2 class="card-title">Web Dev Resources</h2>
+
+                <div class="card-body">
+                    <ul class="resource-list">
+                        <li><a href="#">Dev.to Community</a></li>
+                        <li><a href="#">Smashing Magazine</a></li>
+                        <li><a href="#">CSS-Tricks</a></li>
+                        <li><a href="#">W3Schools</a></li>
+                        <li><a href="#">Udemy</a></li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
     <!-- Footer placeholder area -->
     <footer class="site-footer">
-        <p>
-            <span>© 2026 | Francisco de Paula Barros | Recife</span>
-        </p>
+        <p> <span>© 2026 | Francisco de Paula Barros | Recife</span> </p>
         <p id="last-modified"></p>
     </footer>
 
-    <script src="scripts/getdates.js"></script>
 </body>
 
 </html>

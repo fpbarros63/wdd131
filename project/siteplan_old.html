@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site planning document for WDD 131 website project." />
+    <title>Site Plan | Dev Journey Portfolio</title>
+
+    <!-- Typography (Google Font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/siteplan.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <!-- Simple logo (SVG) -->
+            <div class="logo" aria-hidden="true">
+                <svg viewBox="0 0 48 48" width="42" height="42" role="img" focusable="false">
+                    <circle cx="24" cy="24" r="22" class="logo-bg"></circle>
+                    <path d="M16 18h16v4H16zM16 26h10v4H16z" class="logo-mark"></path>
+                </svg>
+            </div>
+
+            <div class="brand-text">
+                <h1>Dev Journey Portfolio</h1>
+                <p class="tagline">WDD 131 — Website Planning Document (W05)</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Site Name -->
+        <section class="card" id="site-name">
+            <h2>Site Name</h2>
+            <p>
+                <strong>Dev Journey Portfolio</strong> — This name plays on the idea that the website is not only
+                a portfolio, but also a measure of my learning progress and development in web development.
+            </p>
+            <p class="muted">
+                Optional domain idea (not required): <em>devjourney-portfolio.com</em>
+            </p>
+        </section>
+
+        <!-- Site Purpose -->
+        <section class="card" id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>
+                The purpose of the website is to display a personal web development portfolio, along with the learning aspect. The
+                website will contain information regarding my professional life (About), my projects (Projects), and how visitors can
+                reach me (Contact).
+            </p>
+        </section>
+
+        <!-- Scenarios -->
+        <section class="card" id="scenarios">
+            <h2>Scenarios</h2>
+            <p class="muted">Questions a visitor might ask:</p>
+            <ul>
+                <li>Which projects best represent your current web development skills?</li>
+                <li>What technologies (HTML/CSS/JavaScript) have you practiced and where can I see examples?</li>
+                <li>How can I contact you for collaboration, feedback, or opportunities?</li>
+            </ul>
+        </section>
+
+        <!-- Color Schema -->
+        <section class="card" id="color-schema">
+            <h2>Color Schema</h2>
+            <p>
+                The site will use a clean, professional palette with strong contrast for readability.
+                The colors below are used in this site plan document.
+            </p>
+
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="chip chip-1"></div>
+                    <div>
+                        <p><strong>Primary (Navy):</strong> <code>#0B1F3A</code></p>
+                        <p class="muted">Used for headings, header background, and key UI emphasis.</p>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="chip chip-2"></div>
+                    <div>
+                        <p><strong>Accent (Teal):</strong> <code>#1FB6A6</code></p>
+                        <p class="muted">Used for highlights, links, buttons, borders, and small accents.</p>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="chip chip-3"></div>
+                    <div>
+                        <p><strong>Background (Off-white):</strong> <code>#F7F8FA</code></p>
+                        <p class="muted">Used as the main page background for a bright, modern feel.</p>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="chip chip-4"></div>
+                    <div>
+                        <p><strong>Body Text (Near-black):</strong> <code>#111827</code></p>
+                        <p class="muted">Used for paragraph text to ensure legibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="card" id="typography">
+            <h2>Typography</h2>
+            <p>
+                The site will use a single font family to keep the design consistent and modern.
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Roboto</strong> — Used for headings and body text.
+                    <ul>
+                        <li><strong>Headings:</strong> Roboto 400/700</li>
+                        <li><strong>Body:</strong> Roboto 100/400</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="type-samples" aria-label="Typography samples">
+                <p class="sample-h">Heading Example (Roboto 700)</p>
+                <p class="sample-b">
+                    Body text example (Roboto 100/400). The content will remain readable and clean on mobile and desktop
+                    screens.
+                </p>
+                <p class="sample-link">
+                    <a href="#wireframe">Link example (Accent color)</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Wireframe -->
+        <section class="card" id="wireframe">
+            <h2>Wireframe</h2>
+            <p>
+                Below are simple wireframes for the <strong>Home</strong> page layout in mobile and desktop views.
+                (Boxes represent layout areas.)
+            </p>
+
+            <h3>Mobile View</h3>
+            <pre class="wire" aria-label="Mobile wireframe">
++---------------------------+
+| Header / Logo / Nav (≡)  |
++---------------------------+
+| Hero (Intro + CTA)        |
+| [Short bio + button]      |
++---------------------------+
+| Featured Projects (cards) |
+| [Project]                 |
+| [Project]                 |
++---------------------------+
+| Skills Snapshot           |
+| [Badges/Icons]            |
++---------------------------+
+| Reflection Teaser         |
+| [1-2 paragraphs]          |
++---------------------------+
+| Footer (links/contact)    |
++---------------------------+
+      </pre>
+
+            <h3>Desktop View</h3>
+            <pre class="wire" aria-label="Desktop wireframe">
++------------------------------------------------------+
+| Header: Logo | Nav (Home About Projects Contact)     |
++------------------------------------------------------+
+| Hero: Intro text (left)       | Photo/Graphic (right)|
+| CTA button                    |                      |
++------------------------------------------------------+
+| Featured Projects (3 cards across)                   |
+| [Project]            [Project]            [Project]   |
++------------------------------------------------------+
+| Skills (left)                    | Reflection (right)|
+| badges/icons                     | short summary     |
++------------------------------------------------------+
+| Footer: socials + contact info                          |
++------------------------------------------------------+
+      </pre>
+
+            <p class="muted">
+                Notes: The final site will be responsive and may adjust card counts and spacing depending on screen
+                size.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <span class="accent">Dev Journey Portfolio</span> — Site Plan for WDD 131
+        </p>
+    </footer>
+</body>
+
+</html>

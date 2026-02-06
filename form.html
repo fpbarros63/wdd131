@@ -1,0 +1,121 @@
+<!-- form.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Review</title>
+    <meta name="description" content="Product review form">
+    <meta name="author" content="Francisco de Paula Barros">
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Product Review</h1>
+    </header>
+
+    <main class="content">
+        <form class="review-form" method="get" action="review.html">
+            <!-- Product Name -->
+            <div class="field">
+                <label for="productName">Product Name</label>
+                <select id="productName" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <!-- Overall Rating -->
+            <fieldset class="field">
+                <legend>Overall Rating</legend>
+
+                <div class="rating">
+                    <label class="rating-item" for="rating1">
+                        <span class="stars">&star;</span>
+                        <input type="radio" id="rating1" name="rating" value="1" required>
+                    </label>
+
+                    <label class="rating-item" for="rating2">
+                        <span class="stars">&star;&star;</span>
+                        <input type="radio" id="rating2" name="rating" value="2" required>
+                    </label>
+
+                    <label class="rating-item" for="rating3">
+                        <span class="stars">&star;&star;&star;</span>
+                        <input type="radio" id="rating3" name="rating" value="3" required>
+                    </label>
+
+                    <label class="rating-item" for="rating4">
+                        <span class="stars">&star;&star;&star;&star;</span>
+                        <input type="radio" id="rating4" name="rating" value="4" required>
+                    </label>
+
+                    <label class="rating-item" for="rating5">
+                        <span class="stars">&star;&star;&star;&star;&star;</span>
+                        <input type="radio" id="rating5" name="rating" value="5" required>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <div class="field">
+                <label for="installDate">Date of Installation</label>
+                <input type="date" id="installDate" name="installDate" required>
+            </div>
+
+            <!-- Useful Features -->
+            <fieldset class="field">
+                <legend>Which features did you find useful in the product? <span class="hint">(Check all that
+                        apply)</span></legend>
+
+                <div class="checks">
+                    <label for="featDurability">
+                        <input type="checkbox" id="featDurability" name="features" value="Durability">
+                        Durability
+                    </label>
+
+                    <label for="featEase">
+                        <input type="checkbox" id="featEase" name="features" value="Ease of Use">
+                        Ease of Use
+                    </label>
+
+                    <label for="featPerformance">
+                        <input type="checkbox" id="featPerformance" name="features" value="Performance">
+                        Performance
+                    </label>
+
+                    <label for="featDesign">
+                        <input type="checkbox" id="featDesign" name="features" value="Design">
+                        Design
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Written Review -->
+            <div class="field">
+                <label for="writtenReview">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="writtenReview" name="review" rows="6" placeholder="Write your review..."></textarea>
+            </div>
+
+            <!-- User Name -->
+            <div class="field">
+                <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="userName" name="userName" autocomplete="name" placeholder="Your name">
+            </div>
+
+            <!-- Submit -->
+            <div class="actions">
+                <input type="submit" value="Post Review">
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Francisco de Paula Barros • Recife, Brazil</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

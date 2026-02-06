@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WDD 131 - Francisco de Paula Barros</title>
+    <meta name="description" content="Starter template with responsive navigation for WDD 131." />
+    <meta name="author" content="Francisco de Paula Barros" />
+
+    <!-- Google Font (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="Home">
+                <span class="brand-title">WDD 131</span>
+                <span class="brand-subtitle">Francisco de Paula Barros</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="nav" aria-label="Primary">
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="temples.html">Temples</a></li>
+                    <li><a class="nav-link" href="place.html">Place</a></li>
+                    <li><a class="nav-link" href="filtered-temples.html">Filtered</a></li>
+                    <li><a class="nav-link" href="form.html">Form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="scripture-section-rapper">
+            <h2 class="page-title">Minhas Escrituras Favoritas</h2>
+            <div class="scripture-section">
+                <section>
+                    <h2>2 Nephi 32:9</h2>
+                    <p>But behold, I say unto you that ye must pray always, and not faint; that ye must not perform anything
+                        unto the Lord save in the first place ye shall pray unto the Father in the name of Christ, that he will
+                        consecrate they performance unto thee, that thy performance may be for the welfare of thy soul.</p>
+                </section>
+                
+                <section>
+                    <h2>Helaman 12:24</h2>
+                    <p>And may God grant, in his great fulness, that men might be brought unto repentance and good works, that
+                        they might be restored unto grace for grace, according to their works.</p>
+                </section>
+            </div>
+        </div>
+        
+        <div class="gallery-section-rapper">
+            <h2 class="page-title">Home</h2>
+            <section class="gallery">
+                <h2 class="visually-hidden">Temple Gallery</h2>
+        
+                <figure class="card">
+                    <img src="../images/aba-nigeria-temple.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Aba Nigeria</figcaption>
+        
+                </figure>
+                <figure class="card">
+                    <img src="../images/adelaide-australia-temple.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Adelaide Australia</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/albuquerque-novo-mexico.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Albuquerque New Mexico</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/anchorage-alasca-eua.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Anchorage Alaska</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/apia-samoa-temple.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Apia Samoa</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/belem_brazil.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Belém Brazil</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/bern-switzerland-temple.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Bern Switzerland</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/billings-montana-temple.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Billings Montana</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="../images/bismarck-temple.jpg" alt="Temple Placeholder" loading="lazy" class="card-image">
+                    <figcaption class="card-caption">Bismarck North Dakota</figcaption>
+                </figure>
+        
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Francisco de Paula Barros • Recife, Brazil</p>
+    </footer>
+</body>
+
+</html>

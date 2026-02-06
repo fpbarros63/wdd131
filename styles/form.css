@@ -1,23 +1,21 @@
 :root{
   --color-header-bg: #3b0a5f;
   --color-header-tx: #ffffff;
-  
+
   --color-main-bg: #ffffff;
   --color-main-tx: #101828;
 
   --color-form-bg: #e1d7e4;
   --color-form-tx: #ffffff;
   
-  --color-border-soft: rgba(0, 0, 0, 0.12);
+  --color-border-soft: #0000001F; 
+  --border: #0000002E;            
 
   --color-button-bg: #72408a;
   --color-button-tx: #ffffff;
 
   --color-footer-bg: #3b0a5f;
   --color-footer-tx: #ffffff;
-
-
-  --border: rgba(0,0,0,.18);
 }
 
 *{ box-sizing: border-box; }

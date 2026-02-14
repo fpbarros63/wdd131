@@ -11,7 +11,7 @@ body {
 
 /* ===== HEADER ===== */
 .site-header {
-  background: #444;
+  background: #0d2e42;
   color: #fff;
   
 }
@@ -23,7 +23,7 @@ body {
 }
 
 .site-nav {
-  background: #000;
+  background: #0d2e42;
 }
 
 .nav-list {
@@ -147,7 +147,7 @@ body {
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: #222;
+  background: #0d2e42;
   color: #fff;
   text-align: center;
   padding: 15px 16px;

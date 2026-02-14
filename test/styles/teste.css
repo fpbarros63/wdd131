@@ -1,0 +1,18 @@
+*{
+  box-sizing: border-box;
+}
+
+main{
+  margin: 0;
+  padding: 0;
+  background: yellow;
+  width: 60%;
+  margin: 0 20% 0 20%;
+}
+
+.hello {
+  background: red;
+  padding: 1rem;
+  border: 1px solid black;
+  margin: 0 20% 0 20%;
+}

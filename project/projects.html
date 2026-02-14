@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A collection of practical web projects built with HTML, CSS, and JavaScript." />
+    <title>Web Development Portfolio | Projects</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body data-page="projects">
+    <!-- HEADER -->
+    <header>
+        <div class="wrap topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"><span>&lt;/&gt;</span></div>
+                <div>
+                    <strong>Web Development Portfolio</strong><br />
+                    <small>Projects</small>
+                </div>
+            </div>
+
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html" data-page="home">Home</a></li>
+                    <li><a href="projects.html" data-page="projects">Projects</a></li>
+                    <li><a href="contact.html" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- FILTERS -->
+        <section class="card">
+            <h2>Projects</h2>
+            <p>
+                Browse a set of practical web pages and interactive features. Use the filters to narrow results and the
+                search box to find specific skills or keywords.
+            </p>
+
+            <div class="controls" aria-label="Project filters">
+                <label>
+                    Search:
+                    <input id="searchText" type="text" placeholder="Search by skill or keyword..." />
+                </label>
+            
+                <button type="button" id="clearFilters">Clear</button>
+            </div>
+
+            <p class="result-count">
+                Results found: <strong><span id="resultCount">0</span></strong>
+            </p>
+
+        </section>
+
+        <!-- PROJECT LIST -->
+        <section class="card">
+            <h2>Project List</h2>
+            <div id="projectList" class="project-list" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <small>
+            © <span id="year"></span> Francisco de Paula Barros •
+            <a href="references.html">References</a>
+        </small>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

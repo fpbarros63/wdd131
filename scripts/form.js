@@ -12,6 +12,7 @@ products.forEach((p) => {
   const opt = document.createElement("option");
   opt.value = p.id; 
   opt.textContent = p.name; 
+  console.log(opt);
   select.appendChild(opt);
 });
 

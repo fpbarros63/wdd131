@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A practical web development portfolio showcasing projects and skills." />
+    <title>Web Development Portfolio | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body data-page="home">
+    <header>
+        <div class="wrap topbar">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"><span>&lt;/&gt;</span></div>
+                <div>
+                    <strong>Web Development Portfolio</strong><br />
+                    <small>Practical projects built with HTML, CSS, and JavaScript</small>
+                </div>
+            </div>
+
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html" data-page="home">Home</a></li>
+                    <li><a href="projects.html" data-page="projects">Projects</a></li>
+                    <li><a href="contact.html" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Hi, I’m Francisco de Paula</h1>
+                <p>
+                    This website is a practical portfolio designed to showcase real web pages and interactive features
+                    built with HTML, CSS, and JavaScript. Here you can explore selected projects, the skills used in
+                    each one, and how the interface responds to user input.
+                </p>
+                <div class="badges" aria-label="Core skills">
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">Responsive Design</span>
+                    <span class="badge">Pseudo-selectors</span>
+                    <span class="badge">Lazy Loading</span>
+                    <span class="badge">Functions</span>
+                    <span class="badge">Objects</span>
+                    <span class="badge">Array Methods</span>
+                    <span class="badge">Filtering</span>
+                    <span class="badge">Forms</span>
+                    <span class="badge">Validation</span>
+                    <span class="badge">Callbacks</span>
+                    <span class="badge">localStorage</span>
+                </div>
+            </div>
+
+            <img src="images/profile.webp" alt="Profile image of Francisco" loading="lazy" width="300" height="400" />
+        </section>
+
+        <section class="grid">
+            <section class="card">
+                <h2>Professional Snapshot</h2>
+                <p>
+                    I have a solid background in Information Technology, with a degree in Computer Science
+                    and postgraduate studies in management. I spent over three decades working in the IT field,
+                    including ten years in a leadership role as an IT Manager.
+                </p>
+                <p>
+                    Currently, I am refreshing my technical skills and expanding my front-end development
+                    knowledge through hands-on projects, applying modern HTML, CSS, and JavaScript concepts
+                    to build practical and user-focused web experiences. Learn more about my professional background on
+                    <a href="https://www.linkedin.com/in/francisco-de-paula-barros-3762962bb/" target="_blank" rel="noopener">
+                        LinkedIn ↗
+                    </a>
+                </p>
+
+            </section>
+
+            <section id="aside"class="card">
+                <h2>Explore the projects</h2>
+                <p>
+                    Open the Projects page to explore each project, view the technologies used in its development, and search by keyword.
+                    Your filter preferences are saved in localStorage so you can continue where you left off.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <small>
+            © <span id="year"></span> Francisco de Paula Barros •
+            <a href="references.html">References</a>
+        </small>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
